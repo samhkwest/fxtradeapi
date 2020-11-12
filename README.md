@@ -3,32 +3,26 @@
 
 
 
-# Sample REST CRUD API with Spring Boot, Mysql, JPA and Hibernate 
+# A simple RESTFul API Controller for query and creation of Fx Trades 
 
-## Steps to Setup
+## How to use
 
 **1. Clone the application**
 
 ```bash
-https://github.com/givanthak/spring-boot-rest-api-tutorial.git
+https://github.com/samhkwest/fxtradeapi
 ```
 
-**2. Create Mysql database**
+**2. Mysql database**
 ```bash
-create database user_database
+For demonstration purpose, a MySql database has been created by Aurora MySql and is hosted in AWS. The DB configurations are in application.properties file.
 ```
 
-**3. Change mysql username and password as per your installation**
-
-+ open `src/main/resources/application.properties`
-
-+ change `spring.datasource.username` and `spring.datasource.password` as per your mysql installation
-
-**4. Build and run the app using maven**
+**3. Build and run the app using maven**
 
 ```bash
 mvn package
-java -jar target/spring-boot-rest-api-tutorial-0.0.1-SNAPSHOT.jar
+java -jar target/fxtradeapp-0.0.1-SNAPSHOT.jar
 
 ```
 
@@ -42,18 +36,9 @@ The app will start running at <http://localhost:8080>.
 
 ## Explore Rest APIs
 
-The app defines following CRUD APIs.
+The app defines following APIs.
 
-    GET /api/v1/users
+    GET /fxtradeapi/trades
     
-    POST /api/v1/users
-    
-    GET /api/v1/users/{userId}
-    
-    PUT /api/v1/users/{userId}
-    
-    DELETE /api/v1/users/{userId}
-
-You can find the tutorial for this application on my blog -
-
-<https://www.prathapgivantha.wordpress.com>
+    POST /fxtradeapi/trade
+      
