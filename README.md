@@ -35,3 +35,23 @@ The app defines following APIs.
   
 **4. Test the APIs**
 
+Setup service endpoints in Open Postman
+
+1) GET /fxtradeapi/trades
+Endpoint: http://localhost:8080/fxtrade/trades
+Header: Key: Content-Type, Value: application/json
+
+2) POST /fxtradeapi/trade
+Endpoint: http://localhost:8080/fxtrade/trade
+Header: Key: Content-Type, Value: application/json
+Body:
+{
+    "usrid":"334256",
+	"sellccy":"EUR",
+	"sellamt":2345000,
+	"buyccy":"GBP",
+	"buyamt":10000,
+	"fxrate":0.747,
+	"messagets":"12-Nov-20 12:57:44",
+	"origctry":"FR"
+}
