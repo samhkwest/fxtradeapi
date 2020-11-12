@@ -76,3 +76,23 @@ change the value of "usrid" OR "messagets" for each new request.
 
 
 ```
+
+## Automation Test
+
+**1. JUnit classes**
+
+```bash
+The JUnit test classes are in fxtradeapi\src\test\java\com\fxtradeapi\controller.
+```
+**2. Run the automation test**
+
+```bash
+In eclipse, right click the class file FxTradeControllerTest and run as "JUnit Test".
+
+The test results will be shown in console.
+
+For Post API, newly added recorded can be checked in the UI fxtradeapp.
+```
+
+
+
