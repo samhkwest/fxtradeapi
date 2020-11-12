@@ -45,7 +45,7 @@ Endpoint: http://localhost:8080/fxtrade/trade
 Header: Key: Content-Type, Value: application/json
 Body:
 {
-    "usrid":"334256",
+    	"usrid":"334256",
 	"sellccy":"EUR",
 	"sellamt":2345000,
 	"buyccy":"GBP",
