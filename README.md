@@ -15,7 +15,8 @@ https://github.com/samhkwest/fxtradeapi
 
 **2. Mysql database**
 ```bash
-For demonstration purpose, a MySql database has been created by Aurora MySql and is hosted in AWS. The DB configurations are in application.properties file.
+For demonstration, a MySql database has been created by Aurora MySql and is hosted in AWS.
+The DB configurations are in application.properties file.
 ```
 
 **3. Build and run the app using maven**
@@ -41,4 +42,6 @@ The app defines following APIs.
     GET /fxtradeapi/trades
     
     POST /fxtradeapi/trade
-      
+  
+**4. Test the APIs**
+
