@@ -5,7 +5,8 @@
 **1. Clone the application**
 
 ```bash
-https://github.com/samhkwest/fxtradeapi
+Create a project folder "fxtrade" inside your PC's working folder [Root Path].
+Download program sources by: [Root Path]\fxtrade\git clone https://github.com/samhkwest/fxtradeapi
 ```
 
 **2. Mysql database**
@@ -14,21 +15,15 @@ For demonstration, a MySql database has been created by Aurora MySql and is host
 The DB configurations are in application.properties file.
 ```
 
-**3. Build and run the app using maven**
+**3. Run the app using maven**
 
 ```bash
-mvn package
+In folder "fxtrade", run this command:
 java -jar target/fxtradeapp-0.0.1-SNAPSHOT.jar
 
 ```
 
-Alternatively, you can run the app without packaging it using -
-
-```bash
-mvn spring-boot:run
-```
-
-The app will start running at <http://localhost:8080>.
+The app will start running at <http://localhost:8080/fxtrade>.
 
 ## Explore Rest APIs
 
