@@ -33,10 +33,9 @@ The app defines following APIs.
     
     POST /fxtradeapi/trade
 ```  
-**5. Test the APIs**
-```bash
-*Setup service endpoints in Open Postman*
+**5. Setup endpoints in Postman**
 
+```bash
 1) GET /fxtradeapi/trades
 Endpoint: http://localhost:8080/fxtrade/trades
 Header: Key: Content-Type, Value: application/json
@@ -56,7 +55,9 @@ Body:
 	"origctry":"FR"
 }
 
-*Send API request*
+**5. Test the APIs**
+
+```bash
 1) For GET API, click "Send" and then check the response in Body frame.
 
 2) For POST API, same as above. 
