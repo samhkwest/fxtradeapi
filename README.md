@@ -61,5 +61,8 @@ Body:
 1) For GET API, click "Send" and then check the response in Body frame.
 
 2) For POST API, same as above. 
-For repetitive request message, change the value of "usrid" or "messagets" because there is a unique constraints for column usrid and messagets.
+As a unique constraints for column usrid and messagets is set to DB table, 
+change the value of "usrid" OR "messagets" for each new request.
+
+
 ```
