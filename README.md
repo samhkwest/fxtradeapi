@@ -17,7 +17,7 @@ For demonstration, a MySql database has been created by Aurora MySql and is host
 The DB configurations are in application.properties file.
 ```
 
-**3. Run the app using maven**
+**3. Run the app**
 
 ```bash
 In folder "fxtrade", run this command:
