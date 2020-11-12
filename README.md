@@ -6,7 +6,9 @@
 
 ```bash
 Create a project folder "fxtrade" inside your PC's working folder [Root Path].
-Download program sources by: [Root Path]\fxtrade\git clone https://github.com/samhkwest/fxtradeapi
+Run this command to download program sources:
+
+[Root Path]\fxtrade\git clone https://github.com/samhkwest/fxtradeapi
 ```
 
 **2. Mysql database**
@@ -27,7 +29,7 @@ The app will start running at <http://localhost:8080/fxtrade>.
 
 **4. Usage of APIs**
 ```bash
-The app defines following APIs.
+The app defines 2 APIs.
 
     GET /fxtradeapi/trades
     
