@@ -25,16 +25,16 @@ java -jar target/fxtradeapp-0.0.1-SNAPSHOT.jar
 
 The app will start running at <http://localhost:8080/fxtrade>.
 
-## Explore Rest APIs
-
+**4. Usage of APIs**
+```bash
 The app defines following APIs.
 
     GET /fxtradeapi/trades
     
     POST /fxtradeapi/trade
-  
-**4. Test the APIs**
-
+```  
+**5. Test the APIs**
+```bash
 Setup service endpoints in Open Postman
 
 1) GET /fxtradeapi/trades
@@ -55,3 +55,9 @@ Body:
 	"messagets":"12-Nov-20 12:57:44",
 	"origctry":"FR"
 }
+
+Send API request
+1) For GET API, click "Send" and then check the response in Body frame.
+
+2) For POST API, same as above. For repetitive request message, change the value of "usrid" or "messagets" because there is a unique constraints for column usrid and messagets.
+```
