@@ -31,9 +31,9 @@ The app will start running at <http://localhost:8080/fxtrade>.
 ```bash
 The app defines 2 APIs.
 
-    GET /fxtradeapi/trades
+    GET /fxtrade/trades: to get all fx trades
     
-    POST /fxtradeapi/trade
+    POST /fxtrade/trade: to add a new fx trade
 ```  
 
 ## How to test
@@ -41,11 +41,11 @@ The app defines 2 APIs.
 **1. Setup endpoints in Postman**
 
 ```bash
-1) GET /fxtradeapi/trades
+1) GET /fxtrade/trades
 Endpoint: http://localhost:8080/fxtrade/trades
 Header: Key: Content-Type, Value: application/json
 
-2) POST /fxtradeapi/trade
+2) POST /fxtrade/trade
 Endpoint: http://localhost:8080/fxtrade/trade
 Header: Key: Content-Type, Value: application/json
 Body:
