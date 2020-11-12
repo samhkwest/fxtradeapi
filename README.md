@@ -42,12 +42,17 @@ The app defines 2 APIs.
 
 ```bash
 1) GET /fxtrade/trades
+
 Endpoint: http://localhost:8080/fxtrade/trades
+
 Header: Key: Content-Type, Value: application/json
 
 2) POST /fxtrade/trade
+
 Endpoint: http://localhost:8080/fxtrade/trade
+
 Header: Key: Content-Type, Value: application/json
+
 Body:
 {
     	"usrid":"334256",
