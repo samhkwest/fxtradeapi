@@ -33,7 +33,10 @@ The app defines following APIs.
     
     POST /fxtradeapi/trade
 ```  
-**5. Setup endpoints in Postman**
+
+## How to test
+
+**1. Setup endpoints in Postman**
 
 ```bash
 1) GET /fxtradeapi/trades
@@ -55,7 +58,7 @@ Body:
 	"origctry":"FR"
 }
 ```
-**5. Test the APIs**
+**2. Test the APIs**
 
 ```bash
 1) For GET API, click "Send" and then check the response in Body frame.
