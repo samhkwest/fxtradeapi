@@ -13,8 +13,24 @@ Run this command to download program sources:
 
 **2. Mysql database**
 ```bash
-For demonstration, a MySql database has been created by Aurora MySql and is hosted in AWS.
+For demonstration, a MySql database "MySqlDb" has been created by Aurora MySql and is hosted in AWS.
 The DB configurations are in application.properties file.
+The database MySqlDbA contains only 1 table "fxtrade", which is used to store the json data:
+
+CREATE TABLE `fxtrade` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usrid` varchar(50) DEFAULT NULL,
+  `sellccy` char(3) DEFAULT NULL,
+  `buyccy` char(3) DEFAULT NULL,
+  `sellamt` float DEFAULT NULL,
+  `buyamt` float DEFAULT NULL,
+  `fxrate` float DEFAULT NULL,
+  `messagets` varchar(30) DEFAULT NULL,
+  `origctry` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UC_TRADE_MESSAGE` (`usrid`,`messagets`)
+) 
+
 ```
 
 **3. Package and run the app**
