@@ -20,11 +20,11 @@ The DB configurations are in application.properties file.
 **3. Package and run the app**
 
 ```bash
-Compile and package Java files:
+Compile and package the app:
 [root drive]\fxtradeapi>mvn install -Dmaven.test.skip=true
 
 Run the app:
-java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
+[root drive]\fxtradeapi>java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
 ```
 
