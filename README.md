@@ -17,10 +17,13 @@ For demonstration, a MySql database has been created by Aurora MySql and is host
 The DB configurations are in application.properties file.
 ```
 
-**3. Run the app**
+**3. Package and run the app**
 
 ```bash
-In folder "fxtrade", run this command:
+Compile and package Java files:
+[root drive]\fxtradeapi>mvn install -Dmaven.test.skip=true
+
+Run the app:
 java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
 ```
