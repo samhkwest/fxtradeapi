@@ -1,59 +1,117 @@
-[![Build Status](https://travis-ci.com/givanthak/spring-boot-rest-api-tutorial.svg?branch=master)](https://travis-ci.com/givanthak/spring-boot-rest-api-tutorial)
-[![Known Vulnerabilities](https://snyk.io/test/github/givanthak/spring-boot-rest-api-tutorial/badge.svg)](https://snyk.io/test/github/givanthak/spring-boot-rest-api-tutorial)
+# A simple RESTFul API Controller for query and creation of Fx Trades 
 
-
-
-# Sample REST CRUD API with Spring Boot, Mysql, JPA and Hibernate 
-
-## Steps to Setup
+## How to use
 
 **1. Clone the application**
 
 ```bash
-https://github.com/givanthak/spring-boot-rest-api-tutorial.git
+Create a project folder "fxtrade" inside your PC's working folder [Root Path].
+Run this command to download program sources:
+
+[Root Path]\fxtrade\git clone https://github.com/samhkwest/fxtradeapi
 ```
 
-**2. Create Mysql database**
+**2. Mysql database**
 ```bash
-create database user_database
+For demonstration, a MySql database "MySqlDb" has been created by Aurora MySql and is hosted in AWS.
+The DB configurations are in application.properties file.
+The database MySqlDbA contains only 1 table "fxtrade", which is used to store the json data:
+
+CREATE TABLE `fxtrade` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usrid` varchar(50) DEFAULT NULL,
+  `sellccy` char(3) DEFAULT NULL,
+  `buyccy` char(3) DEFAULT NULL,
+  `sellamt` float DEFAULT NULL,
+  `buyamt` float DEFAULT NULL,
+  `fxrate` float DEFAULT NULL,
+  `messagets` varchar(30) DEFAULT NULL,
+  `origctry` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UC_TRADE_MESSAGE` (`usrid`,`messagets`)
+) 
+
 ```
 
-**3. Change mysql username and password as per your installation**
-
-+ open `src/main/resources/application.properties`
-
-+ change `spring.datasource.username` and `spring.datasource.password` as per your mysql installation
-
-**4. Build and run the app using maven**
+**3. Package and run the app**
 
 ```bash
-mvn package
-java -jar target/spring-boot-rest-api-tutorial-0.0.1-SNAPSHOT.jar
+Compile and package the app:
+[root drive]\fxtradeapi>mvn install -Dmaven.test.skip=true
+
+Run the app:
+[root drive]\fxtradeapi>java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
 ```
 
-Alternatively, you can run the app without packaging it using -
+The app will start running at <http://localhost:8080/fxtrade>.
+
+**4. Usage of APIs**
+```bash
+The app defines 2 APIs.
+
+    GET /fxtrade/trades: to get all fx trades
+    
+    POST /fxtrade/trade: to add a new fx trade
+```  
+
+## How to test
+
+**1. Setup endpoints in Postman**
 
 ```bash
-mvn spring-boot:run
+1) GET /fxtrade/trades
+
+Endpoint: http://localhost:8080/fxtrade/trades
+
+Header: Key: Content-Type, Value: application/json
+
+2) POST /fxtrade/trade
+
+Endpoint: http://localhost:8080/fxtrade/trade
+
+Header: Key: Content-Type, Value: application/json
+
+Body:
+{
+    	"usrid":"334256",
+	"sellccy":"EUR",
+	"sellamt":2345000,
+	"buyccy":"GBP",
+	"buyamt":10000,
+	"fxrate":0.747,
+	"messagets":"12-Nov-20 12:57:44",
+	"origctry":"FR"
+}
+```
+**2. Test the APIs**
+
+```bash
+1) For GET API, click "Send" and then check the response in Body frame.
+
+2) For POST API, same as above. 
+As a unique constraints for column usrid and messagets is set to DB table, 
+change the value of "usrid" OR "messagets" for each new request.
+
+
 ```
 
-The app will start running at <http://localhost:8080>.
+## Automation Test
 
-## Explore Rest APIs
+**1. JUnit classes**
 
-The app defines following CRUD APIs.
+```bash
+The JUnit test classes are in fxtradeapi\src\test\java\com\fxtradeapi\controller.
+```
+**2. Run the automation test**
 
-    GET /api/v1/users
-    
-    POST /api/v1/users
-    
-    GET /api/v1/users/{userId}
-    
-    PUT /api/v1/users/{userId}
-    
-    DELETE /api/v1/users/{userId}
+```bash
+In eclipse, right click the class file FxTradeControllerTest and run as "JUnit Test".
 
-You can find the tutorial for this application on my blog -
+The test results will be shown in console.
 
-<https://www.prathapgivantha.wordpress.com>
+For Post API, newly added recorded can be checked in the UI fxtradeapp.
+```
+
+
+
