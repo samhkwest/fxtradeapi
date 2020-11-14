@@ -21,7 +21,7 @@ The DB configurations are in application.properties file.
 
 ```bash
 In folder "fxtrade", run this command:
-java -jar target/fxtradeapp-0.0.1-SNAPSHOT.jar
+java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
 ```
 
