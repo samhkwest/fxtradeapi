@@ -27,7 +27,7 @@ Run the app:
 [root drive]\fxtradeapi>java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
 
-![Run the app](../../mydoc/springbootserver_on.PNG)
+![Run the app](https://github.com/samhkwest/mydoc/blob/master/springbootserver_on.PNG)
 ```
 
 The app will start running at <http://localhost:8080/fxtrade>.
