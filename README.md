@@ -99,7 +99,7 @@ Body:
 As a unique constraints for column usrid and messagets is set to DB table, 
 change the value of "usrid" OR "messagets" for each new request.
 
-![getfxtrades_result](https://github.com/samhkwest/mydoc/blob/master/addfxtrade_results.PNG)
+![addfxtrade_result](https://github.com/samhkwest/mydoc/blob/master/addfxtrade_results.PNG)
 
 ```
 
