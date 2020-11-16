@@ -92,17 +92,15 @@ Body:
 ```bash
 1) For GET API, click "Send" and then check the response in Body frame.
 ```
-![test 1](https://github.com/samhkwest/mydoc/blob/master/getfxtrades_results.PNG)
-![test 2](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
+![get fx trades](https://github.com/samhkwest/mydoc/blob/master/getfxtrades_results.PNG)
 
-
+```bash
 2) For POST API, same as above. 
 As a unique constraints for column usrid and messagets is set to DB table, 
 change the value of "usrid" OR "messagets" for each new request.
-
+```
 ![add fx trade](https://github.com/samhkwest/mydoc/blob/master/addfxtrade_results.PNG)
 
-```
 
 ## Automation Test
 
