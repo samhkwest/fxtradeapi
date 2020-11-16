@@ -91,7 +91,7 @@ Body:
 
 ```bash
 1) For GET API, click "Send" and then check the response in Body frame.
-
+```
 ![test 1](https://github.com/samhkwest/mydoc/blob/master/getfxtrades_results.PNG)
 ![test 2](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
 
