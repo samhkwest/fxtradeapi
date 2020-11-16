@@ -102,6 +102,7 @@ change the value of "usrid" OR "messagets" for each new request.
 ![add fx trade](https://github.com/samhkwest/mydoc/blob/master/addfxtrade_results.PNG)
 
 
+
 ## Automation Test
 
 **1. JUnit classes**
