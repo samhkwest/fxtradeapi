@@ -93,7 +93,7 @@ Body:
 1) For GET API, click "Send" and then check the response in Body frame.
 
 ![test 1](https://github.com/samhkwest/mydoc/blob/master/getfxtrades_results.PNG)
-![get fx trades](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
+![test 2](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
 
 
 2) For POST API, same as above. 
