@@ -46,6 +46,9 @@ Run the app:
 
 The app will start running at <http://localhost:8080/fxtrade>.
 
+
+![Test Image 1](https://github.com/samhkwest/mydoc/blob/master/compile_success.PNG)
+
 **4. Usage of APIs**
 ```bash
 The app defines 2 APIs.
