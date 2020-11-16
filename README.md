@@ -38,14 +38,17 @@ CREATE TABLE `fxtrade` (
 ```bash
 Compile and package the app:
 [root drive]\fxtradeapi>mvn install -Dmaven.test.skip=true
+```
 
+![maven build](https://github.com/samhkwest/mydoc/blob/master/maven_build.PNG)
+
+
+```bash
 Run the app:
 [root drive]\fxtradeapi>java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
-```
-
 The app will start running at <http://localhost:8080/fxtrade>.
-
+```
 
 ![compile success](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
 
