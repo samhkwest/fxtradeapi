@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,7 @@ public class FxTradeController {
   @Autowired
   private FxTradeRepository fxTradeRepository;
 
-  @PostMapping(path = GlobalConst.ADD_NEW_URL)
+  @PostMapping(path = GlobalConst.ADD_NEW_URL, consumes = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Object> addFxTrade(@RequestBody FxTrade fxTradeToAdd) {		 
 	FxTrade createdFxTrade = fxTradeRepository.saveAndFlush(fxTradeToAdd);	  
 	return new ResponseEntity<>(createdFxTrade, HttpStatus.CREATED);

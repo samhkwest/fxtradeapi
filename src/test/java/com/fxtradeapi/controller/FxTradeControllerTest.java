@@ -30,7 +30,7 @@ public class FxTradeControllerTest extends AbstractTest {
 	public void getAllFxTradesTest() throws Exception{
 		String uri = GlobalConst.DOMAIN_URL+GlobalConst.GET_ALL_URL;
 		
-		//this stimulates api request to localhost:8080/fxtrade/trades
+		//send mock http request to controller
 		MvcResult mvcResult = mockMvc.perform(get(uri)
 				.accept(MediaType.APPLICATION_JSON))
 				.andReturn();
@@ -49,19 +49,22 @@ public class FxTradeControllerTest extends AbstractTest {
 	@Test 
 	public void sendFxTradeTest() throws Exception{ 
 		String uri = GlobalConst.DOMAIN_URL+GlobalConst.ADD_NEW_URL;
-		        
+		       
+		//given
 		String messagets = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss.SSS").format(new Date());	      	      
 		FxTrade fxTrade = new FxTrade("S000001","USD",10000f,"HKD",75000f,7.5f,messagets,"HK");
 		
 		//this is payload of post request message which contains unique json data
 		String inputJson = super.mapToJson(fxTrade);
 	  
-		//this stimulates api request to localhost:8080/fxtrade/trade
+		//when
+		//send mock http request to controller
 		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
 			.contentType(MediaType.APPLICATION_JSON_VALUE)
 			.content(inputJson))
 			.andReturn();
 	  
+		//then
 		//check response status
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(201, status);
