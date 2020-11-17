@@ -38,13 +38,19 @@ CREATE TABLE `fxtrade` (
 ```bash
 Compile and package the app:
 [root drive]\fxtradeapi>mvn install -Dmaven.test.skip=true
+```
 
+![maven build](https://github.com/samhkwest/mydoc/blob/master/maven_build.PNG)
+
+
+```bash
 Run the app:
 [root drive]\fxtradeapi>java -jar target/fxtradeapi-0.0.1-SNAPSHOT.jar
 
+The app will start running at <http://localhost:8080/fxtrade>.
 ```
 
-The app will start running at <http://localhost:8080/fxtrade>.
+![compile success](https://github.com/samhkwest/mydoc/blob/master/run_fxtradeapi.PNG)
 
 **4. Usage of APIs**
 ```bash
@@ -88,13 +94,17 @@ Body:
 
 ```bash
 1) For GET API, click "Send" and then check the response in Body frame.
+```
+![get fx trades](https://github.com/samhkwest/mydoc/blob/master/getfxtrades_results.PNG)
 
+```bash
 2) For POST API, same as above. 
 As a unique constraints for column usrid and messagets is set to DB table, 
 change the value of "usrid" OR "messagets" for each new request.
-
-
 ```
+![add fx trade](https://github.com/samhkwest/mydoc/blob/master/addfxtrade_results.PNG)
+
+
 
 ## Automation Test
 
